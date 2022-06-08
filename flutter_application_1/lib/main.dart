@@ -49,18 +49,24 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   String mytext="Hello!";
+  String fb="Facebook";
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
     home: Scaffold(
       appBar: AppBar(
-        title: Icon(
+        title:Text(fb),leading:
+         Icon(
           
          // "Flutter App",<==== use this when we use text widget
          // style: TextStyle(color: Colors.white),
-          Icons.facebook,color: Colors.white,//using icon widget
-          ),
+          Icons.facebook,
+            color: Colors.white,//using icon widget
+      
           
+          ),
+ 
+         
           ),
           body: Container(
             color: Colors.red,
