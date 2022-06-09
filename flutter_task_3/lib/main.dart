@@ -35,8 +35,8 @@ class _MyAppState extends State<MyApp> {
 Padding(
                  padding: EdgeInsets.symmetric(vertical: 30,horizontal: 30),
             child:Container(
-                  height: 50,
-                  width: 50,
+                  height: 70,
+                  width: 70,
                   color: Colors.blue,
             child: TextButton(
                       onPressed:(){
@@ -45,15 +45,15 @@ Padding(
                   }
      );
    } ,
-        child: Text("Blue", style: TextStyle(color: Colors.white),),
+        child: Text("BLUE", style: TextStyle(color: Colors.white),),
           ),
       )
       ),
 Padding(
           padding: EdgeInsets.symmetric(vertical: 30,horizontal: 30),
         child:Container(
-          height: 50,
-          width: 50,
+          height: 70,
+          width: 70,
           color: Colors.red,
           child: TextButton(
             onPressed:(){
@@ -66,7 +66,80 @@ Padding(
           ),
       )
       )
-  ],) 
+  ],), 
+ Row(children: [
+Padding(
+                 padding: EdgeInsets.symmetric(vertical: 30,horizontal: 30),
+            child:Container(
+                  height:  70,
+                  width:  70,
+                  color: Colors.green,
+            child: TextButton(
+                      onPressed:(){
+              setState(() {
+                        containerColor=Colors.green;
+                  }
+     );
+   } ,
+        child: Text("GREEN", style: TextStyle(color: Colors.white),),
+          ),
+      )
+      ),
+Padding(
+          padding: EdgeInsets.symmetric(vertical: 30,horizontal: 30),
+        child:Container(
+          height: 70,
+          width: 70,
+          color: Colors.purple,
+          child: TextButton(
+            onPressed:(){
+              setState(() {
+                containerColor=Colors.purple;
+        }
+);
+} ,
+        child: Text("PURPLE", style: TextStyle(color: Colors.white),
+          ),
+      )
+      )
+      )
+  ],), 
+  Row(children: [
+Padding(
+                 padding: EdgeInsets.symmetric(vertical: 30,horizontal: 30),
+            child:Container(
+                  height: 70,
+                  width: 70,
+                  color: Colors.pink,
+            child: TextButton(
+                      onPressed:(){
+              setState(() {
+                        containerColor=Colors.pink;
+                  }
+     );
+   } ,
+        child: Text("PINK", style: TextStyle(color: Colors.white),),
+          ),
+      )
+      ),
+Padding(
+          padding: EdgeInsets.symmetric(vertical: 30,horizontal: 30),
+        child:Container(
+          height: 70,
+          width: 70,
+          color: Color.fromARGB(255, 202, 122, 92),
+          child: TextButton(
+            onPressed:(){
+              setState(() {
+                containerColor=Color.fromARGB(255, 202, 122, 92);
+        }
+);
+} ,
+        child: Text("BROWN", style: TextStyle(color: Colors.white),),
+          ),
+      )
+      )
+  ],), 
             ],)
           
           ),
