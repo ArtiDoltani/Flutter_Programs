@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
+
 
 void  main() {
   runApp(MyApp());
@@ -57,9 +57,9 @@ class _MyAppState extends State<MyApp> {
                     containerColor=Colors.green;
                  });
                 }),
-                mycontainer(Colors.orange,"ORANGE",(){
+                mycontainer(Colors.yellow,"Yellow",(){
                   setState(() {
-                     containerColor=Colors.orange;
+                     containerColor=Colors.yellow;
                   });
                  
                 })
@@ -85,27 +85,33 @@ class _MyAppState extends State<MyApp> {
 )
 
 
-) 
+)
        
-      )  );
+      ),  );
      }
  }
 class mycontainer extends StatelessWidget {
   Color colorcontainer;
-  VoidCallback OnClick;
+  VoidCallback onClick;
   String textColor;
-   mycontainer(this.colorcontainer,this.textColor,this.OnClick);
+   mycontainer(this.colorcontainer,this.textColor,this.onClick);
 
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-          height: 70,
-          width: 70,
-          color: colorcontainer,
-        
-          
-     );
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 20),
+      child: Container(
+            height: 70,
+            width: 70,
+            color: colorcontainer,
+          child: TextButton(
+            onPressed: onClick,
+            child: Text(textColor,style: TextStyle(color: Colors.white),),
+          ),
+            
+       ),
+    );
    }
     
   }
