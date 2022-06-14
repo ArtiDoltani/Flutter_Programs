@@ -9,7 +9,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
 List<Container> mylist=[];
 List<Color> containercolor=[Colors.red,Colors.blue,Colors.green,Colors.orange,Colors.pink];
-int count=0;
+int count=0; int counter=1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,23 +22,25 @@ title: Row(children: [
   mylist.add(
     Container(width: 90,height: 60,
     color:containercolor[count] ,
+    child: Text("Counter is $counter" ,style: TextStyle(color: Colors.black)),
   ))
   ;
 if(count<containercolor.length-1){
    count++;
-  
-  
 }
   else {
     count=0;
   }
+   counter++;
  });
  }, 
  child: Icon(Icons.add))
 ],),
 
 ),
-body: Container(
+body:
+ Container(
+child:SingleChildScrollView(
 child: Column(
   children:
    //[
@@ -51,6 +53,7 @@ child: Column(
     mylist,
 ),
 ),
+    )
     );
   }
 }
