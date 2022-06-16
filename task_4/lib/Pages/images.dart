@@ -115,22 +115,32 @@ IconButton(onPressed: (){}, icon:Icon(Icons.more_vert),
 body:
  Container(
   
-child:SingleChildScrollView(
-child: Column(
-  children:
-    imagelist,
+child: GridView.count(
+  crossAxisCount:4,
+  children:[
+    Image.asset('assets/Images/img_1.png'),
+     Image.asset('assets/Images/img_2.png'),
+      Image.asset('assets/Images/img_3.png'),
+       Image.asset('assets/Images/img_4.png'),
+        Image.asset('assets/Images/img_5.png'),
+         Image.asset('assets/Images/img_6.png'),
+          Image.asset('assets/Images/img_1.png'),
+     Image.asset('assets/Images/img_2.png'),
+  ]
+  //  imagelist,
 ),
 ),
-    ),
     floatingActionButton: FloatingActionButton(onPressed:() { 
-      setState(() {
-        imagelist.add(Image.asset('assets/Images/img_$count.png'));
-         count< 6 ? count++ : count=1;
-      });
-
-    },
-    child:Icon(Icons.add)),
+      // setState(() {
+      //   imagelist.add(Image.asset('assets/Images/img_$count.png'));
+      //    count< 6 ? count++ : count=1;
+      }
+    )
     );
     
 
-}}
+    }
+   // child:Icon(Icons.add)),
+    
+
+}
