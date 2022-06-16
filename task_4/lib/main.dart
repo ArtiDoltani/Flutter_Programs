@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'Models/User_Model.dart';
 import 'Pages/Home.dart';
+import 'Pages/grid_Task.dart';
 import 'Pages/images.dart';
 
 void main() {
+  User user1= User("John","John","male");
   runApp(const MyApp());
 }
 
@@ -26,7 +29,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home:Imagedemo()
+      home:gridTask()
     );
   }
 }
