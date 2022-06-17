@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:task_4/Pages/listviewdemo.dart';
 import 'Models/User_Model.dart';
 import 'Pages/Home.dart';
 import 'Pages/grid_Task.dart';
 import 'Pages/images.dart';
 
 void main() {
-  User user1= User("John","John","male");
+
   runApp(const MyApp());
 }
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp(debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home:gridTask()
+      home:listviewdemo()
     );
   }
 }
