@@ -33,7 +33,7 @@ class _listviewdemoState extends State<listviewdemo> {
     );
   }
   List<Container> myMethod(){
-     for(int i=0;i<myUserList.length;i++){
+     for(int i=1;i<=myUserList.length;i++){
         containerList.add(
          Container(
           width: 100,
@@ -43,24 +43,23 @@ class _listviewdemoState extends State<listviewdemo> {
           decoration: BoxDecoration
           (shape: BoxShape.rectangle,
            color: Colors.blue,
-           borderRadius: BorderRadius.circular(10)
+           borderRadius: BorderRadius.circular(10),
+         border: Border.all(color: Colors.pink,width: 5.0,style: BorderStyle.solid
+          ),
           ),
          child: Row(
           children: [
             CircleAvatar(
               backgroundColor:Colors.white,
-              radius: 50,
+              radius: 30,
+              backgroundImage: AssetImage("assets/images/img_$i.png"),
             ),
 
-         Text("Name:${myUserList[i].userName}\nEMAIL: ${myUserList[i].email}\nGENDER: ${myUserList[i].gender} "
-       , style:TextStyle(color: Colors.black,fontSize: 20) , )
+         Text("Name:${myUserList[i-1].userName}\nEMAIL: ${myUserList[i-1].email}\nGENDER: ${myUserList[i-1].gender} "
+           , style:TextStyle(color: Colors.black,fontSize: 20) )
           ],
          )
          )
-
-
-
-
          );
         }
          return containerList;
