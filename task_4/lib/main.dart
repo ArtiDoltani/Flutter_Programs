@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:task_4/Models/user.dart';
+import 'package:task_4/Pages/info.dart';
+import 'package:task_4/Pages/inputdemo.dart';
 import 'package:task_4/Pages/listviewdemo.dart';
 import 'Models/User_Model.dart';
 import 'Pages/Home.dart';
@@ -30,7 +33,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home:listviewdemo()
+      home:UserInfo()
     );
   }
 }
