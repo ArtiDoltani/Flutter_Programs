@@ -29,7 +29,7 @@ home: Scaffold(
       
 child: Text(
       'Invitation to interview $company_name /Interview with $company_name for the Software developer position \n '
-      '  Hi $name  Dear $gender $name, \n'
+      '  Hi $name,\n  Dear $gender $name, \n'
       '  Thank you for applying to $company_name \n'
     '    You are doing well Your Skill level is too good As you are an \n' 
     '    $level and you are selected in our $company_name Company in \n'

@@ -150,6 +150,22 @@ ListTile(
             gender==Gender.Male ? genderinfo= 'Mr' : genderinfo='Miss';
             shift==Shift.Morning ? timing1="Morning Shift, from 9am to 4pm " : 
             timing1="Morning Shift, from 9am to 4pm " ;
+            if(
+              name.isEmpty || gender==null || proglevel==null || socialmedia==null ||
+              shiftinfo==null){
+                showDialog(
+                  barrierDismissible: false,
+                  context: context, builder:
+                 (BuildContext context)=>
+                 AlertDialog(
+                  title: Text("Please fill all the fields"),
+                    actions: [TextButton(onPressed: (){
+                      Navigator.pop(context);
+                    }, child: Text("Ok"))],
+                 )
+                 );
+              }
+              else{
               Navigator.push(context, MaterialPageRoute(
                 builder: (BuildContext context)=>ShowCandidate_Data(
                   name: name,
@@ -159,7 +175,7 @@ ListTile(
                   gender: genderinfo,
                 )
               )
-              );
+              );}
               
             }, child: Text("Submit")
             )
