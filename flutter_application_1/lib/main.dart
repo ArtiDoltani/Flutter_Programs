@@ -70,23 +70,42 @@ class _MyAppState extends State<MyApp> {
           ),
           body: Container(
             color: Colors.red,
-          child:Container(
-            width: 50.0,
-            height: 50.0,
-            color: Colors.amber,
-            child: TextButton(
-              onPressed: (){
-                setState(() {
-                  mytext="Hello Arti";
-                });
-              },
-              child: Text(mytext, style: TextStyle(color: Colors.blue),
-              ) ,
-              ),
-          )
+           
+          // child: Column(
+          //   children: [
+          //  Text(mytext, style: TextStyle(color: Colors.amber,fontSize: 20.0),)  ,
+          //   Text("Arti", style: TextStyle(color: Colors.white ,fontSize: 20.0),)  ,
+          //   Icon(Icons.home,color: Colors.white,)
+          //   ],
+          // ),
+ child: Row(
+            children: [
+           Text(mytext, style: TextStyle(color: Colors.amber,fontSize: 20.0),
+           )  ,
+           SizedBox(width: 20),
+           Text("Home sweet home", style: TextStyle(color: Colors.white ,fontSize: 20),
+           )  ,
+            SizedBox(width: 20),
+            Icon(Icons.home,color: Colors.blue)
+            ],
+          ),
+          // child:Container(
+          //   width: 50.0,
+          //   height: 50.0,
+          //   color: Colors.amber,
+          //   child: TextButton(
+          //     onPressed: (){
+          //       setState(() {
+          //         mytext="Hello Arti";
+          //       });
+          //     },
+          //     child: Text(mytext, style: TextStyle(color: Colors.blue),
+          //     ) ,
+          //     ),
+           )
          
 
-          ),
+          // ), 
     )
     );
 //   }
