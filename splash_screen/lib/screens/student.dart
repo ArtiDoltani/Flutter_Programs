@@ -1,17 +1,19 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'loginScreen.dart';
 
-class Homescreen extends StatefulWidget {
-  const Homescreen({Key? key}) : super(key: key);
+class Student_view extends StatefulWidget {
+  const Student_view({Key? key}) : super(key: key);
 
   @override
-  State<Homescreen> createState() => _HomescreenState();
+  State<Student_view> createState() => _Student_viewState();
 }
 
-class _HomescreenState extends State<Homescreen> {
-  String email='',age ='', usertype='';
+class _Student_viewState extends State<Student_view> {
+   String email='',age ='',usertype='';
   //here we are creating method to get data 
   void initState(){
     super.initState();
@@ -27,13 +29,14 @@ setState(() {
   
 });
   }
-  
   @override
-  Widget build(BuildContext context) {
+   Widget build(BuildContext context) {
    return  Scaffold(
     appBar: AppBar(
-      title:const Text('Home'),
+      title:const Text('Student View'),
+      centerTitle: true,
    automaticallyImplyLeading: false,),
+
       
     body:Padding(
       padding: const EdgeInsets.all(20.0),
@@ -53,8 +56,14 @@ setState(() {
           const  Text('Age'),
             Text(age.toString())
           ],),
-       
-           SizedBox(height: 40,),
+     const  SizedBox(height: 20,),
+ Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+          const  Text('User Type'),
+            Text(usertype.toString())
+          ],),
+        const   SizedBox(height: 40,),
            InkWell(
                 onTap: () async{
                    SharedPreferences sp=await SharedPreferences.getInstance();
@@ -63,6 +72,7 @@ setState(() {
                   MaterialPageRoute(builder: (context) => LoginScreen(),)
                   );
                 },
+               
 
                 child: Container(
                   width: double.infinity,
@@ -77,4 +87,4 @@ setState(() {
    );
    
   }
-}
+  }
